@@ -1,0 +1,14 @@
+PODS:
+  - CustomActionsheet (0.1.0)
+
+DEPENDENCIES:
+  - CustomActionsheet (from `../`)
+
+EXTERNAL SOURCES:
+  CustomActionsheet:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CustomActionsheet: 5c0a975764e1f48622183ea1590a539f5e294696
+
+COCOAPODS: 0.38.2

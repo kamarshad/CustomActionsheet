@@ -9,22 +9,23 @@
 Pod::Spec.new do |s|
   s.name             = "CustomActionsheet"
   s.version          = "0.1.0"
-  s.summary          = "A short description of CustomActionsheet."
+  s.summary          = "A custom actionsheet, inheriting to UIView."
 
 # This description is used to generate tags and improve search results.
+#   * This Componet is replica of actionsheet, inhertiting to UIView. Anybody can customize the appreance of actionsheet with just small effort.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
+  s.description      = <<-DESC This CocoaPod provides the custom actionsheet. Don't worry about the detailed part like show/dismiss animation. It handles everything inside itself.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/CustomActionsheet"
+  s.homepage         = "https://github.com/kamarshad/CustomActionsheet"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "mohd kamar shad" => "mohdkd@goldengekko.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/CustomActionsheet.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "mohd kamar shad" => "kamarshad0786@gmail.com" }
+  s.source           = { :git => "https://github.com/kamarshad/CustomActionsheet.git", :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/kamarshad'
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
