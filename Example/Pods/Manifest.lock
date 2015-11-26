@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  CustomActionsheet: 5c0a975764e1f48622183ea1590a539f5e294696
+  CustomActionsheet: 5c54152d9ba3546cba7447ee4a0bc7c8a49684dc
 
 COCOAPODS: 0.38.2

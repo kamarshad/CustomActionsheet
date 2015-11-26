@@ -1,17 +1,18 @@
 {
   "name": "CustomActionsheet",
   "version": "0.1.0",
-  "summary": "A short description of CustomActionsheet.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/CustomActionsheet",
+  "summary": "A custom actionsheet base class of UIView.",
+  "description": "This CocoaPod provides the custom actionsheet.\n                       Don't worry about the detailed part like show/dismiss animation.\n                       It handles everything inside itself.",
+  "homepage": "https://github.com/kamarshad/CustomActionsheet",
   "license": "MIT",
   "authors": {
-    "mohd kamar shad": "mohdkd@goldengekko.com"
+    "kamarshad": "kamarshad0786@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/CustomActionsheet.git",
+    "git": "https://github.com/kamarshad/CustomActionsheet.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/kamarshad",
   "platforms": {
     "ios": "7.0"
   },
@@ -19,7 +20,8 @@
   "source_files": "Pod/Classes/**/*",
   "resource_bundles": {
     "CustomActionsheet": [
-      "Pod/Assets/*.png"
+      "Pod/Assets/*.png",
+      "Pod/View/XIB/*.xib"
     ]
   }
 }

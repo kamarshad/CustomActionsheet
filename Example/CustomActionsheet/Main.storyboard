@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="whP-gf-Uak">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -16,12 +16,68 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eo8-46-xX0">
+                                <rect key="frame" x="200" y="60" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="XcW-RI-Ty9"/>
+                                    <constraint firstAttribute="width" constant="200" id="rNx-Gi-bGE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Type 1 With Title">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="type1Action:" destination="whP-gf-Uak" eventType="touchUpInside" id="qoF-js-0Td"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCc-40-xIH">
+                                <rect key="frame" x="200" y="133" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0tD-OW-Zn1"/>
+                                    <constraint firstAttribute="width" constant="200" id="6VA-RF-ImP"/>
+                                </constraints>
+                                <state key="normal" title="Type 2 With Title">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="type2Action:" destination="whP-gf-Uak" eventType="touchUpInside" id="TSN-v6-pQf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt6-me-hla">
+                                <rect key="frame" x="200" y="203" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4J1-q0-xff"/>
+                                    <constraint firstAttribute="height" constant="45" id="bX8-Wd-ZId"/>
+                                </constraints>
+                                <state key="normal" title="Without Title">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="type3Action:" destination="whP-gf-Uak" eventType="touchUpInside" id="bAv-qX-AQg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Eo8-46-xX0" secondAttribute="centerX" id="B8I-IB-EJg"/>
+                            <constraint firstItem="NCc-40-xIH" firstAttribute="top" secondItem="Eo8-46-xX0" secondAttribute="bottom" constant="28" id="GOa-gg-VMf"/>
+                            <constraint firstAttribute="centerX" secondItem="NCc-40-xIH" secondAttribute="centerX" id="Yxt-QR-Uq3"/>
+                            <constraint firstAttribute="centerX" secondItem="Tt6-me-hla" secondAttribute="centerX" id="gLP-lX-RjO"/>
+                            <constraint firstItem="Eo8-46-xX0" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="40" id="hfr-vk-xb8"/>
+                            <constraint firstItem="Tt6-me-hla" firstAttribute="top" secondItem="NCc-40-xIH" secondAttribute="bottom" constant="25" id="l4K-wb-gJR"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="35" y="318"/>
         </scene>
     </scenes>
 </document>
