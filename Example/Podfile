@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'CustomActionsheet_Example', :exclusive => true do
+  pod "CustomActionsheet", :path => "../"
+end
+
+target 'CustomActionsheet_Tests', :exclusive => true do
+  pod "CustomActionsheet", :path => "../"
+
+  
+end
