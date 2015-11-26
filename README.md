@@ -1,5 +1,5 @@
 # CustomActionsheet
-<<<<<<< 4900a64dbad7634b664343b6fc8c2b54d3decafd
+This is a customized Actionsheet inheriting to the UIView class. Don't worry about the detailed part like show/dismiss animation, It handles everything inside itself.
 =======
 
 [![CI Status](http://img.shields.io/travis/mohd kamar shad/CustomActionsheet.svg?style=flat)](https://travis-ci.org/mohd kamar shad/CustomActionsheet)
@@ -10,6 +10,14 @@
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## How to call 
+Look into the |MKSViewController.m| inside the Example for CustomActionsheet folder it has all possible way of displaying this actionsheet.
+
+## Forthcoming feature
+1.Add new animation
+2.Make it full dynamica
+3.Improvie code 
 
 ## Requirements
 
@@ -24,7 +32,7 @@ pod "CustomActionsheet"
 
 ## Author
 
-mohd kamar shad, mohdkd@goldengekko.com
+mohd kamar shad, kamarshad0786@gmail.com
 
 ## License
 
