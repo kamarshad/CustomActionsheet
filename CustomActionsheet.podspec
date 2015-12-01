@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'CustomActionsheet'
+  s.name             = "CustomActionsheet"
   s.version          = "0.1.0"
   s.summary          = "A custom actionsheet base class of UIView."
 

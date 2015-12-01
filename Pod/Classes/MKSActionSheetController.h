@@ -1,5 +1,5 @@
 //
-//  VRActionSheetController.h
+//  MKActionSheetController.h
 //
 //  Created by Kamar Shad on 28/07/15.
 //  Copyright (c) 2015 Kamar Shad. All rights reserved.
@@ -16,24 +16,24 @@
  *
  *  @param title          title text which will be displayed on top of actionsheet view
  *  @param bgColor        bgColor background for actionsheet view pass nil if dont want to display it
- *  @param cancelBtnTitle cancelBtnTitle text title
- *  @param otherBtn1Title otherBtn1Title text title
- *  @param otherBtn2Title otherBtn2Title text title
- *  @param cancelBtnColor cancelBtnColor text color
- *  @param otherBtn1Color otherBtn1Color text color
- *  @param otherBtn2Color otherBtn2Color text color
- *  @param completion     completion executes once user tap on any button
+ *  @param cancelButtonTitle title text that displayed on it
+ *  @param button1Title title text that displayed on it
+ *  @param button2Title title text that displayed on it
+ *  @param cancelButtonColor text color
+ *  @param button1Color  text color
+ *  @param button2Color text color
+ *  @param completionBlock     completion executes once user tap on any button
  */
-- (void)showActionsheetInControllerInController:(UIViewController*)controller
-                          withTitle:(NSString*)title
-                          withActionsheetBackgroundColor:(UIColor*)bgColor
-                          withCancelButtonTitle:(NSString*)cancelBtnTitle
-                          withOtherButton1Title:(NSString*)otherBtn1Title
-                          withOtherButton2Title:(NSString*)otherBtn2Title
-                          withCancelButtonColor:(UIColor*)cancelBtnColor
-                          withOtherButton1Color:(UIColor*)otherBtn1Color
-                          withOtherButton2Color:(UIColor*)otherBtn2Color
-                        withColpetionBlock:(MKSActionsheetBlock)completion;
+- (void)showActionsheetInController:(UIViewController*)controller
+                    title:(NSString*)title
+                    backgroundColor:(UIColor*)bgColor
+                    cancelButtonTitle:(NSString*)cancelButtonTitle
+                    button1Title:(NSString*)button1Title
+                    button2Title:(NSString*)button2Title
+                    cancelButtonTitleColor:(UIColor*)cancelButtonColor
+                    button1TitleColor:(UIColor*)button1Color
+                    button2TitleColor:(UIColor*)button2Color
+                    completionBlock:(MKSActionsheetBlock)completion;
 
 /**
  *  @brief Call this method to dismiss action sheet

@@ -1,5 +1,5 @@
 //
-//  VRActionSheetController.m
+//  MKActionSheetController.m
 //
 //  Created by Kamar Shad on 28/07/15.
 //  Copyright (c) 2015 Kamar Shad. All rights reserved.
@@ -68,28 +68,28 @@ NSString * kActionSheetView = @"MKSActionSheetView";
 }
 
 #pragma mark - Public Method
-- (void)showActionsheetInControllerInController:(UIViewController*)controller
-                          withTitle:(NSString*)title
-                          withActionsheetBackgroundColor:(UIColor*)bgColor
-                          withCancelButtonTitle:(NSString*)cancelBtnTitle
-                          withOtherButton1Title:(NSString*)otherBtn1Title
-                          withOtherButton2Title:(NSString*)otherBtn2Title
-                          withCancelButtonColor:(UIColor*)cancelBtnColor
-                          withOtherButton1Color:(UIColor*)otherBtn1Color
-                          withOtherButton2Color:(UIColor*)otherBtn2Color
-                        withColpetionBlock:(MKSActionsheetBlock)completion{
+- (void)showActionsheetInController:(UIViewController*)controller
+                              title:(NSString*)title
+                    backgroundColor:(UIColor*)bgColor
+                  cancelButtonTitle:(NSString*)cancelButtonTitle
+                       button1Title:(NSString*)button1Title
+                       button2Title:(NSString*)button2Title
+                  cancelButtonTitleColor:(UIColor*)cancelButtonTitleColor
+                       button1TitleColor:(UIColor*)button1TitleColor
+                       button2TitleColor:(UIColor*)button2TitleColor
+                     completionBlock:(MKSActionsheetBlock)completion{
 
     [controller addChildViewController:self];
 
-    [self.actionSheetView customizeActionSheetAppearanceWithTtile:title
-                          withActionsheetBackgroundColor:bgColor
-                                   withCancelButtonTitle:cancelBtnTitle
-                                            withOtherButton1Title:otherBtn1Title
-                                            withOtherButton2Title:otherBtn2Title
-                                            withCancelButtonColor:cancelBtnColor
-                                            withOtherButton1Color:otherBtn1Color
-                                            withOtherButton2Color:otherBtn2Color
-                                               withColpetionBlock:completion];
+    [self.actionSheetView customizeActionSheetAppearanceWithTitle:title
+                          backgroundColor:bgColor
+                          cancelButtonTitle:cancelButtonTitle
+                          button1Title:button1Title
+                          button2Title:button2Title
+                          cancelButtonTitleColor:cancelButtonTitleColor
+                          button1TitleColor:button1TitleColor
+                          button2TitleColor:button2TitleColor
+                          completionBlock:completion];
     
     
     //Get Visible sheet Height;

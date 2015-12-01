@@ -1,5 +1,5 @@
 //
-//  VRActionSheetView.m
+//  MKActionSheetView.m
 //  Created by Kamar Shad on 28/07/15.
 //  Copyright (c) 2015 Kamar Shad. All rights reserved.
 //
@@ -82,9 +82,7 @@
     return [UIColor colorWithRed:209.0/255.0 green:209.0/255.0 blue:209.0/255.0 alpha:1.0];
 }
 
-- (void)adjustAletviewHeightUsingTitle:(NSString*)title
-                 withOtherButton1Title:(NSString*)otherButton1Title
-                 withOtherButton2Title:(NSString*)otherButton2Title{
+- (void)adjustAletviewHeightUsingTitle:(NSString*)title button1Title:(NSString*)button1Title  button2Title:(NSString*)button2Title{
     
 
     //Padding
@@ -105,12 +103,12 @@
     }
     
     //if otherbutton1title available then only count its height
-    if(otherButton1Title.length>0){
+    if(button1Title.length>0){
         otherButton1Height =  45;
     }
 
     //if otherbutton2title available then only count its height
-    if(otherButton2Title.length>0){
+    if(button2Title.length>0){
         otherButton2Height = 45;
         otherBtn1AndOtherBtn2 = 5.0;
     }
@@ -174,40 +172,42 @@
 }
 #pragma mark - Public Method
 
-- (void)customizeActionSheetAppearanceWithTtile:(NSString*)title
-                 withActionsheetBackgroundColor:(UIColor*)bgColor
-                          withCancelButtonTitle:(NSString*)cancelBtnTitle
-                          withOtherButton1Title:(NSString*)otherBtn1Title
-                          withOtherButton2Title:(NSString*)otherBtn2Title
-                          withCancelButtonColor:(UIColor*)cancelBtnColor
-                          withOtherButton1Color:(UIColor*)otherBtn1Color
-                          withOtherButton2Color:(UIColor*)otherBtn2Color
-                             withColpetionBlock:(MKSActionsheetBlock)completion{
-    
+- (void)customizeActionSheetAppearanceWithTitle:(NSString*)title
+                                backgroundColor:(UIColor*)bgColor
+                              cancelButtonTitle:(NSString*)cancelButtonTitle
+                                   button1Title:(NSString*)button1Title
+                                   button2Title:(NSString*)button2Title
+                         cancelButtonTitleColor:(UIColor*)cancelButtonTitleColor
+                              button1TitleColor:(UIColor*)button1TitleColor
+                              button2TitleColor:(UIColor*)button2TitleColor
+                                completionBlock:(MKSActionsheetBlock)completion{
+
     self.compeltionBlock =  completion;
     
     self.sheetMessageLabel.text = title;
     self.actionsheetMainView.backgroundColor = bgColor;
     
     
-    [self.cancelBtn setTitle:cancelBtnTitle forState:UIControlStateNormal];
-    [self.cancelBtn setTitle:cancelBtnTitle forState:UIControlStateSelected];
-    [self.cancelBtn setTitle:cancelBtnTitle forState:UIControlStateHighlighted];
-    [self.otherButton1 setTitle:otherBtn1Title forState:UIControlStateNormal];
-    [self.otherButton1 setTitle:otherBtn1Title forState:UIControlStateSelected];
-    [self.otherButton1 setTitle:otherBtn1Title forState:UIControlStateHighlighted];
-    [self.otherButton2 setTitle:otherBtn2Title forState:UIControlStateNormal];
-    [self.otherButton2 setTitle:otherBtn2Title forState:UIControlStateSelected];
-    [self.otherButton2 setTitle:otherBtn2Title forState:UIControlStateHighlighted];
+    [self.cancelBtn setTitle:cancelButtonTitle forState:UIControlStateNormal];
+    [self.cancelBtn setTitle:cancelButtonTitle forState:UIControlStateSelected];
+    [self.cancelBtn setTitle:cancelButtonTitle forState:UIControlStateHighlighted];
+    [self.otherButton1 setTitle:button1Title forState:UIControlStateNormal];
+    [self.otherButton1 setTitle:button1Title forState:UIControlStateSelected];
+    [self.otherButton1 setTitle:button1Title forState:UIControlStateHighlighted];
+    [self.otherButton2 setTitle:button2Title forState:UIControlStateNormal];
+    [self.otherButton2 setTitle:button2Title forState:UIControlStateSelected];
+    [self.otherButton2 setTitle:button2Title forState:UIControlStateHighlighted];
     
-    [self.otherButton2 setTitleColor:otherBtn2Color forState:UIControlStateNormal];
-    [self.otherButton1 setTitleColor:otherBtn1Color forState:UIControlStateNormal];
-    [self.cancelBtn setTitleColor:cancelBtnColor forState:UIControlStateNormal];
+
+    [self.cancelBtn setTitleColor:cancelButtonTitleColor forState:UIControlStateNormal];
+    [self.otherButton1 setTitleColor:button1TitleColor forState:UIControlStateNormal];
+    [self.otherButton2 setTitleColor:button2TitleColor forState:UIControlStateNormal];
+
     
     
     [self adjustAletviewHeightUsingTitle:title
-                   withOtherButton1Title:otherBtn1Title
-                   withOtherButton2Title:otherBtn2Title];
+                            button1Title:button1Title
+                            button2Title:button2Title];
     
 }
 

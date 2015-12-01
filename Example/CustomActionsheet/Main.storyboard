@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="width" constant="200" id="rNx-Gi-bGE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Type 1 With Title">
+                                <state key="normal" title="Type1 Actionsheet">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="45" id="0tD-OW-Zn1"/>
                                     <constraint firstAttribute="width" constant="200" id="6VA-RF-ImP"/>
                                 </constraints>
-                                <state key="normal" title="Type 2 With Title">
+                                <state key="normal" title="Type2 Actionsheet">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -55,7 +55,7 @@
                                     <constraint firstAttribute="width" constant="200" id="4J1-q0-xff"/>
                                     <constraint firstAttribute="height" constant="45" id="bX8-Wd-ZId"/>
                                 </constraints>
-                                <state key="normal" title="Without Title">
+                                <state key="normal" title="Type3 Actionsheet">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

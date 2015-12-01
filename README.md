@@ -1,6 +1,6 @@
 # CustomActionsheet
 
-This is a customized actionsheet View, which appears on top of UIWindow. Don't worry about the detailed part like show/dismiss animation, It handles everything inside itself.
+This is a customized actionsheet which appears on top of UIWindow. Don't worry about the detailed part like show/dismiss animation, It handles everything inside itself.
 
 
 [![CI Status](http://img.shields.io/travis/mohd kamar shad/CustomActionsheet.svg?style=flat)](https://travis-ci.org/mohd kamar shad/CustomActionsheet)
@@ -12,52 +12,51 @@ This is a customized actionsheet View, which appears on top of UIWindow. Don't w
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## How to call:
+## How to call
 
 To use display action sheet in your app, simply follow below steps. 
 
     `#import "MKSActionSheetController.h"`
 
 
-if you want to display actionsheet having `title` and `two buttons` along with `cancel button` your code should be like this.
+if you want to display an actionsheet having `Title` and `Two Buttons` along with `Cancel Button` your code should be like this.
 
     `MKSActionSheetController* actionsheetController = [[MKSActionSheetController alloc] init];
 
-     [actionsheetController showActionsheetInControllerInController:self
-                            withTitle:@"Actionsheet title"
-                            withActionsheetBackgroundColor:[UIColor lightGrayColor]
-                            withCancelButtonTitle:@"CancelButton title"
-                            withOtherButton1Title:@"First Button title"
-                            withOtherButton2Title:@"Second Button title"
-                            withCancelButtonColor:[UIColor lightGrayColor]//Cancel button title color
-                            withOtherButton1Color:[UIColor darkGrayColor] //First button title color
-                            withOtherButton2Color:[UIColor darkGrayColor] //Second button title color
-                            withColpetionBlock:^(kActionsheetTappedButtonIndex index) {
+     [actionsheetController showActionsheetInController:self
+                            title:@"Actionsheet title" //Actionsheet header title text
+                            backgroundColor:[UIColor lightGrayColor] //Actionsheet background color
+                            cancelButtonTitle:@"CancelButton title" //Cancel button title text 
+                            button1Title:@"Button1 title"  //Button1 title text 
+                            button2Title:@"Button1 title"  //Button2 title text 
+                            cancelButtonColor:[UIColor lightGrayColor]//Cancel button title text color
+                            button1Color:[UIColor darkGrayColor] //Button1 title text color
+                            button2Color:[UIColor darkGrayColor] //Button2 button title text color
+                            completionBlock:^(kActionsheetTappedButtonIndex index) {
                             //Dissmiss Actionsheet controller
                                 [actionsheetController dismissActionsheet];
                             //Do appropriate action
-                            //Basis of button tapped do your work.
     }];`
 
 
-If you want to display, actionsheet having `One button` with `cancel button` having no ation sheet title, with no `actionsheet bakcground` .
+If you want to display, an actionsheet having `Single Button` with `Cancel Button` without any `Title` and `Bakcground color`.
 
         `MKSActionSheetController* actionsheetController = [[MKSActionSheetController alloc] init];
 
-        [actionsheetController showActionsheetInControllerInController:self
-                                withTitle:nil
-                                withActionsheetBackgroundColor:nil
-                                withCancelButtonTitle:@"CancelButton title"
-                                withOtherButton1Title:@"First Button title"
-                                withOtherButton2Title:nil
-                                withCancelButtonColor:[UIColor lightGrayColor]//Cancel button title color
-                                withOtherButton1Color:[UIColor darkGrayColor] //First button title color
-                                withOtherButton2Color:nil //Second button title color
-                                withColpetionBlock:^(kActionsheetTappedButtonIndex index) {
-                                //Dissmiss Actionsheet controller
-                                    [actionsheetController dismissActionsheet];
-                                //Do appropriate action
-                                //Basis of button tapped do your work.
+        [actionsheetController showActionsheetInController:self
+                                title:nil //Actionsheet header title text
+                                backgroundColor:nil //Actionsheet background color
+                                cancelButtonTitle:@"CancelButton title" //Cancel button title text 
+                                button1Title:@"Button1 title"  //Button1 title text 
+                                button2Title:nil   //Button2 title text 
+                                cancelButtonColor:[UIColor lightGrayColor]//Cancel button title text color
+                                button1Color:[UIColor darkGrayColor] //Button1 title text color
+                                button2Color:nil //Button2 title text color
+                                completionBlock:^(kActionsheetTappedButtonIndex index) {
+                               
+                                    //Dissmiss Actionsheet controller
+                                       [actionsheetController dismissActionsheet];
+                                    //Do appropriate action
         }];`
 
 

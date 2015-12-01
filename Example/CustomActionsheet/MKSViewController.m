@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,24 +31,26 @@
 
 - (IBAction)type1Action:(id)sender{
     __block MKSViewController* wSelf = self;
-
+    
     MKSActionSheetController* actionsheetController = [[MKSActionSheetController alloc] init];
     
-    [actionsheetController showActionsheetInControllerInController:self
-                                                         withTitle:@"Choose option below action sheet type1"
-                                    withActionsheetBackgroundColor:[UIColor lightGrayColor]
-                                             withCancelButtonTitle:@"Cancel"
-                                             withOtherButton1Title:@"First option"
-                                             withOtherButton2Title:@"Second option"
-                                             withCancelButtonColor:[UIColor lightGrayColor]
-                                             withOtherButton1Color:[UIColor darkGrayColor]
-                                             withOtherButton2Color:[UIColor darkGrayColor]
-                                                withColpetionBlock:^(kActionsheetTappedButtonIndex index) {
-                                                    //Dissmiss Actionsheet controller
-                                                    [actionsheetController dismissActionsheet];
-                                                    //Do appropriate action
-                                                    [wSelf actionsheetActionType:index];
-                                                }];
+    [actionsheetController showActionsheetInController:self
+                                                 title:@"Choose option below action sheet type1"
+                                       backgroundColor:[UIColor lightGrayColor]
+                                     cancelButtonTitle:@"Cancel"
+                                          button1Title:@"First option"
+                                          button2Title:@"Second option"
+                                cancelButtonTitleColor:[UIColor lightGrayColor]
+                                     button1TitleColor:[UIColor darkGrayColor]
+                                     button2TitleColor:[UIColor darkGrayColor]
+                                        completionBlock:^(kActionsheetTappedButtonIndex index) {
+                                            
+                                            //Dissmiss Actionsheet controller
+                                            
+                                            [actionsheetController dismissActionsheet];
+                                            //Do appropriate action
+                                            [wSelf actionsheetActionType:index];
+                                        }];
 }
 
 - (void)actionsheetActionType:(kActionsheetTappedButtonIndex)index{
@@ -60,7 +62,7 @@
         case kActionsheetTappedButtonIndexOther2:
             //DO whatever task required to do
             break;
-        
+            
         default:
             //Cancel action
             break;
@@ -73,22 +75,27 @@
     
     MKSActionSheetController* actionsheetController = [[MKSActionSheetController alloc] init];
     
-    [actionsheetController showActionsheetInControllerInController:self
-                                                         withTitle:@"Choose option below action sheet type2"
-                                    withActionsheetBackgroundColor:[UIColor lightGrayColor]
-                                             withCancelButtonTitle:@"Cancel"
-                                             withOtherButton1Title:@"First option"
-                                             withOtherButton2Title:nil
-                                             withCancelButtonColor:[UIColor lightGrayColor]
-                                             withOtherButton1Color:[UIColor darkGrayColor]
-                                             withOtherButton2Color:nil
-                                                withColpetionBlock:^(kActionsheetTappedButtonIndex index) {
-                                                    //Dissmiss Actionsheet controller
-                                                    [actionsheetController dismissActionsheet];
-                                                    //Do appropriate action
-                                                    [wSelf actionsheetActionType:index];
-                                                }];
-
+    [actionsheetController showActionsheetInController:self
+                                                 title:@"Choose option below action sheet type2"
+                                       backgroundColor:[UIColor lightGrayColor]
+                                     cancelButtonTitle:@"Cancel"
+                                          button1Title:@"First option"
+                                          button2Title:nil
+                                cancelButtonTitleColor:[UIColor lightGrayColor]
+                                     button1TitleColor:[UIColor darkGrayColor]
+                                     button2TitleColor:nil
+                                        completionBlock:^(kActionsheetTappedButtonIndex index) {
+                                            
+                                            //Dissmiss Actionsheet controller
+                                            
+                                            [actionsheetController dismissActionsheet];
+                                            
+                                            //Do appropriate action
+                                            
+                                            [wSelf actionsheetActionType:index];
+                                            
+                                        }];
+    
 }
 
 - (IBAction)type3Action:(id)sender{
@@ -96,22 +103,26 @@
     
     MKSActionSheetController* actionsheetController = [[MKSActionSheetController alloc] init];
     
-    [actionsheetController showActionsheetInControllerInController:self
-                                                         withTitle:nil
-                                    withActionsheetBackgroundColor:nil
-                                             withCancelButtonTitle:@"Cancel"
-                                             withOtherButton1Title:@"First option"
-                                             withOtherButton2Title:nil
-                                             withCancelButtonColor:[UIColor lightGrayColor]
-                                             withOtherButton1Color:[UIColor darkGrayColor]
-                                             withOtherButton2Color:nil
-                                                withColpetionBlock:^(kActionsheetTappedButtonIndex index) {
-                                                    //Dissmiss Actionsheet controller
-                                                    [actionsheetController dismissActionsheet];
-                                                    //Do appropriate action
-                                                    [wSelf actionsheetActionType:index];
-                                                }];
-
+    [actionsheetController showActionsheetInController:self
+                                                 title:nil
+                                       backgroundColor:nil
+                                     cancelButtonTitle:@"Cancel"
+                                          button1Title:@"First option"
+                                          button2Title:nil
+                                cancelButtonTitleColor:[UIColor lightGrayColor]
+                                     button1TitleColor:[UIColor darkGrayColor]
+                                     button2TitleColor:nil
+                                        completionBlock:^(kActionsheetTappedButtonIndex index) {
+                                            
+                                            //Dissmiss Actionsheet controller
+                                            
+                                            [actionsheetController dismissActionsheet];
+                                            
+                                            //Do appropriate action
+                                            
+                                            [wSelf actionsheetActionType:index];
+                                            
+                                        }];
     
 }
 
