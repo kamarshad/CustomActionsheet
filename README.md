@@ -3,7 +3,7 @@
 This is a customized actionsheet which appears on top of UIWindow. Don't worry about the detailed part like show/dismiss animation, It handles everything inside itself.
 
 
-[![CI Status](http://img.shields.io/travis/mohd kamar shad/CustomActionsheet.svg?style=flat)](https://travis-ci.org/mohd kamar shad/CustomActionsheet)
+[![CI Status](http://img.shields.io/travis/kamarshad/CustomActionsheet.svg?style=flat)](https://travis-ci.org/kamarshad/CustomActionsheet)
 [![Version](https://img.shields.io/cocoapods/v/CustomActionsheet.svg?style=flat)](http://cocoapods.org/pods/CustomActionsheet)
 [![License](https://img.shields.io/cocoapods/l/CustomActionsheet.svg?style=flat)](http://cocoapods.org/pods/CustomActionsheet)
 [![Platform](https://img.shields.io/cocoapods/p/CustomActionsheet.svg?style=flat)](http://cocoapods.org/pods/CustomActionsheet)
@@ -16,14 +16,16 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 To use display action sheet in your app, simply follow below steps. 
 
-    `#import "MKSActionSheetController.h"`
+    #import "MKSActionSheetController.h"
 
 
 if you want to display an actionsheet having `Title` and `Two Buttons` along with `Cancel Button` your code should be like this.
 
-    `MKSActionSheetController* actionsheetController = [[MKSActionSheetController alloc] init];
+```Objective C
 
-     [actionsheetController showActionsheetInController:self
+    MKSActionSheetController* actionsheetController = [[MKSActionSheetController alloc] init];
+
+    [actionsheetController showActionsheetInController:self
                             title:@"Actionsheet title" //Actionsheet header title text
                             backgroundColor:[UIColor lightGrayColor] //Actionsheet background color
                             cancelButtonTitle:@"CancelButton title" //Cancel button title text 
@@ -36,14 +38,15 @@ if you want to display an actionsheet having `Title` and `Two Buttons` along wit
                             //Dissmiss Actionsheet controller
                                 [actionsheetController dismissActionsheet];
                             //Do appropriate action
-    }];`
-
+    }];
+```
 
 If you want to display, an actionsheet having `Single Button` with `Cancel Button` without any `Title` and `Bakcground color`.
 
-        `MKSActionSheetController* actionsheetController = [[MKSActionSheetController alloc] init];
+  ```Objective C      
+   MKSActionSheetController* actionsheetController = [[MKSActionSheetController alloc] init];
 
-        [actionsheetController showActionsheetInController:self
+   [actionsheetController showActionsheetInController:self
                                 title:nil //Actionsheet header title text
                                 backgroundColor:nil //Actionsheet background color
                                 cancelButtonTitle:@"CancelButton title" //Cancel button title text 
@@ -57,9 +60,8 @@ If you want to display, an actionsheet having `Single Button` with `Cancel Butto
                                     //Dissmiss Actionsheet controller
                                        [actionsheetController dismissActionsheet];
                                     //Do appropriate action
-        }];`
-
-
+   }];
+```
 
 ## Requirements
 
